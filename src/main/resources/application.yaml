@@ -1,18 +1,6 @@
 spring:
   application:
-    name: activityservice
-
   datasource:
-    url: mongodb://localhost:27017/activities
-    username: root
     password: Emma007.
 
 server:
-  port: 8082
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
