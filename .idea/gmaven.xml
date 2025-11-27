@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenSettings">
+    <option name="linkedExternalProjectsSettings">
+      <MavenProjectSettings>
+        <option name="distributionSettings">
+          <DistributionSettings>
+            <option name="type" value="BUNDLED" />
+            <option name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.6/apache-maven-3.9.6-bin.zip" />
+            <path value="C:\Users\DELL\.m2\wrapper\dists\apache-maven-3.9.6-bin\439sdfsg2nbdob9ciift5h5nse\apache-maven-3.9.6" />
+          </DistributionSettings>
+        </option>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/.idea" />
+        <option name="modules">
+          <set>
+            <option value="C:\Users\DELL\OneDrive\Documents\microservices\.idea" />
+          </set>
+        </option>
+      </MavenProjectSettings>
+      <MavenProjectSettings>
+        <option name="distributionSettings">
+          <DistributionSettings>
+            <option name="type" value="BUNDLED" />
+            <option name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.6/apache-maven-3.9.6-bin.zip" />
+            <path value="C:\Users\DELL\.m2\wrapper\dists\apache-maven-3.9.6-bin\439sdfsg2nbdob9ciift5h5nse\apache-maven-3.9.6" />
+          </DistributionSettings>
+        </option>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fitness_app/.idea" />
+        <option name="modules">
+          <set>
+            <option value="C:\Users\DELL\OneDrive\Documents\microservices\fitness_app\.idea" />
+          </set>
+        </option>
+      </MavenProjectSettings>
+      <MavenProjectSettings>
+        <option name="distributionSettings">
+          <DistributionSettings>
+            <option name="type" value="WRAPPER" />
+          </DistributionSettings>
+        </option>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fitness_app/activity" />
+        <option name="localRepositoryPath" value="C:\Users\DELL\.m2\repository" />
+        <option name="modules">
+          <set>
+            <option value="C:\Users\DELL\OneDrive\Documents\microservices\fitness_app\activity" />
+          </set>
+        </option>
+      </MavenProjectSettings>
+      <MavenProjectSettings>
+        <option name="distributionSettings">
+          <DistributionSettings>
+            <option name="type" value="WRAPPER" />
+          </DistributionSettings>
+        </option>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fitness_app/eureka" />
+        <option name="localRepositoryPath" value="C:\Users\DELL\.m2\repository" />
+        <option name="modules">
+          <set>
+            <option value="C:\Users\DELL\OneDrive\Documents\microservices\fitness_app\eureka" />
+          </set>
+        </option>
+      </MavenProjectSettings>
+      <MavenProjectSettings>
+        <option name="distributionSettings">
+          <DistributionSettings>
+            <option name="type" value="WRAPPER" />
+          </DistributionSettings>
+        </option>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fitness_app/fitness_app" />
+        <option name="localRepositoryPath" value="C:\Users\DELL\.m2\repository" />
+        <option name="modules">
+          <set>
+            <option value="C:\Users\DELL\OneDrive\Documents\microservices\fitness_app\fitness_app" />
+          </set>
+        </option>
+      </MavenProjectSettings>
+    </option>
+  </component>
+</project>
