@@ -1,0 +1,23 @@
+
+spring:
+  application:
+    name: fitnessApp
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fitness_db
+    username: postgres
+    password: Emma007.
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+server:
+  port: 8083
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+
