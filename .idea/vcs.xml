@@ -4,6 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/fitness_app/activity" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/fitness_app/eureka" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/fitness_app/userService" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fitness_app/fitness_app" vcs="Git" />
   </component>
 </project>

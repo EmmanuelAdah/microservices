@@ -3,6 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/fitness_app/activity/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fitness_app/eureka/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/fitness_app/fitness_app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fitness_app/user_service/src/main/java" charset="UTF-8" />
   </component>
 </project>
