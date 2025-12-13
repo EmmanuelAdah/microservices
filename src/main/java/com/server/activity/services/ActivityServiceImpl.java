@@ -12,9 +12,12 @@ import java.util.List;
 import static com.server.activity.utils.Mapper.map;
 
 @Service
-@RequiredArgsConstructor
 public class ActivityServiceImpl implements ActivityService {
     private final ActivityRepository activityRepository;
+
+    public ActivityServiceImpl(ActivityRepository activityRepository) {
+        this.activityRepository = activityRepository;
+    }
 
     @Override
     public ActivityResponse saveActivity(ActivityRequest request) {
