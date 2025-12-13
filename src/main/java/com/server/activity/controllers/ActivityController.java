@@ -10,9 +10,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/activity")
-@RequiredArgsConstructor
 public class ActivityController {
     private final ActivityServiceImpl activityService;
+
+    public ActivityController(ActivityServiceImpl activityService) {
+        this.activityService = activityService;
+    }
 
     @PostMapping("/save")
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest request) {
