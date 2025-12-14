@@ -6,7 +6,6 @@ import com.server.activity.dtos.requests.ActivityRequest;
 import com.server.activity.dtos.response.ActivityResponse;
 import com.server.activity.exceptions.NoActivityFoundException;
 import com.server.activity.utils.Mapper;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import static com.server.activity.utils.Mapper.map;

@@ -3,7 +3,6 @@ package com.server.activity.controllers;
 import com.server.activity.dtos.requests.ActivityRequest;
 import com.server.activity.dtos.response.ActivityResponse;
 import com.server.activity.services.ActivityServiceImpl;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
