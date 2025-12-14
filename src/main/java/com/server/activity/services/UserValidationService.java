@@ -1,0 +1,33 @@
+package com.server.activity.services;
+
+import com.server.activity.exceptions.InternalServerException;
+import com.server.activity.exceptions.InvalidUserRequestException;
+import com.server.activity.exceptions.UserNotFoundException;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
+
+@Service
+@RequiredArgsConstructor
+public class UserValidationService {
+    private final WebClient userValidationWebClient;
+
+    public boolean isValidUser(String userId) {
+        try {
+            return userValidationWebClient.get()
+                    .uri("/api/user/validate/{userId}", userId)
+                    .retrieve()
+                    .bodyToMono(Boolean.class)
+                    .block();
+        } catch (WebClientResponseException ex) {
+            if (ex.getStatusCode() == HttpStatus.NOT_FOUND) {
+                throw new UserNotFoundException("User not found with id: " + userId);
+            }else if (ex.getStatusCode() == HttpStatus.BAD_REQUEST) {
+                throw new InvalidUserRequestException("Invalid request with id: " + userId);
+            }
+        }
+        throw new InternalServerException("User not found with id: " + userId);
+    }
+}
