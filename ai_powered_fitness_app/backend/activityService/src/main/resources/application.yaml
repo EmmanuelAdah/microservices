@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: activity-service
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: ${RABBITMQ_PASSWORD}
+    username: ${RABBITMQ_USERNAME}
+
+  mongodb:
+    uri: mongodb://localhost:27017/fitness_db
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+
+rabbitmq:
+  queue:
+    name: activity_queue
+  exchange:
+    name: activity_exchange
+  routing:
+    key: activity_routing_key
