@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ai_service
+    name: ai-service
 
   rabbitmq:
     host: localhost
@@ -8,11 +8,13 @@ spring:
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
 
+  mongodb:
+    uri: mongodb://localhost:27017/fitness_db
+
 gemini:
   api:
     url: ${GEMINI_URL}
     key: ${GEMINI_KEY}
-
 
 eureka:
   client:
@@ -23,7 +25,7 @@ eureka:
 
 rabbitmq:
   queue:
-    name: activity.queue
+    name: activity_queue
 
 server:
   port: 8082
