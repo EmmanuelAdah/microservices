@@ -3,12 +3,14 @@ package com.server.aiservice.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.server.aiservice.models.Activity;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class ActivityAIService {
     private final AIService aiService;
 
@@ -16,7 +18,7 @@ public class ActivityAIService {
     public void processRequest(Activity activity) {
         String prompt = generatePrompt(activity);
         String aiResponse = aiService.getAnswers(prompt);
-
+        log.info("AI Response: {}", aiResponse);
     }
 
     public String generatePrompt(Activity activity) {
