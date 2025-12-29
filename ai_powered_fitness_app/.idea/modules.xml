@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/.idea.iml" filepath="$PROJECT_DIR$/.idea/modules/.idea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/activity/activity.iml" filepath="$PROJECT_DIR$/backend/activity/activity.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" filepath="$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/aiservice/aiservice.iml" filepath="$PROJECT_DIR$/backend/aiservice/aiservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/configService/configService.iml" filepath="$PROJECT_DIR$/backend/configService/configService.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/eureka/eureka.iml" filepath="$PROJECT_DIR$/backend/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/gateway/gateway.iml" filepath="$PROJECT_DIR$/backend/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/userService/userService.iml" filepath="$PROJECT_DIR$/backend/userService/userService.iml" />
     </modules>
   </component>
