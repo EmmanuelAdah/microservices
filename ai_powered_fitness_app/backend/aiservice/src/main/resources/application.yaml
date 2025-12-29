@@ -28,4 +28,4 @@ rabbitmq:
     name: activity_queue
 
 server:
-  port: 8082
+  port: 8081

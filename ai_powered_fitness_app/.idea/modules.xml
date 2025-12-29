@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/.idea.iml" filepath="$PROJECT_DIR$/.idea/modules/.idea.iml" />
-      <module fileurl="file://$PROJECT_DIR$/backend/activity/activity.iml" filepath="$PROJECT_DIR$/backend/activity/activity.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" filepath="$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/aiservice/aiservice.iml" filepath="$PROJECT_DIR$/backend/aiservice/aiservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/configService/configService.iml" filepath="$PROJECT_DIR$/backend/configService/configService.iml" />
