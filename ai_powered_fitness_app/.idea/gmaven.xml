@@ -21,6 +21,7 @@
         <option name="distributionSettings">
           <DistributionSettings>
             <option name="type" value="WRAPPER" />
+            <option name="url" value="" />
           </DistributionSettings>
         </option>
         <option name="externalProjectPath" value="$PROJECT_DIR$/backend/activity" />

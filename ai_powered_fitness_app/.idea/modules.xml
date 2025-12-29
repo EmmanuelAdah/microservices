@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" filepath="$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/eureka/eureka.iml" filepath="$PROJECT_DIR$/backend/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/userService/userService.iml" filepath="$PROJECT_DIR$/backend/userService/userService.iml" />
     </modules>
   </component>
 </project>
