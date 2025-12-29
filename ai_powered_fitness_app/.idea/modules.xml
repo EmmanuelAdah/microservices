@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" filepath="$PROJECT_DIR$/.idea/ai_powered_fitness_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/aiservice/aiservice.iml" filepath="$PROJECT_DIR$/backend/aiservice/aiservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/configService/configService.iml" filepath="$PROJECT_DIR$/backend/configService/configService.iml" />
-      <module fileurl="file://$PROJECT_DIR$/backend/eureka/eureka.iml" filepath="$PROJECT_DIR$/backend/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/gateway/gateway.iml" filepath="$PROJECT_DIR$/backend/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/userService/userService.iml" filepath="$PROJECT_DIR$/backend/userService/userService.iml" />
     </modules>
