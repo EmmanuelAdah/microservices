@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/backend/userService/pom.xml" />
         <option value="$PROJECT_DIR$/backend/configService/pom.xml" />
         <option value="$PROJECT_DIR$/backend/activityService/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/eurekaServer/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
