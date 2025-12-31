@@ -15,11 +15,16 @@ public class UserValidationService {
 
     public void isValidUser(String userId) {
         try {
-            userValidationWebClient.get()
+            Boolean isValidUser = userValidationWebClient
+                    .get()
                     .uri("/api/user/validate/{userId}", userId)
                     .retrieve()
                     .bodyToMono(Boolean.class)
                     .block();
+
+            if (Boolean.FALSE.equals(isValidUser)) {
+                throw new InvalidUserRequestException("Invalid request with id: " + userId);
+            }
 
         } catch (WebClientResponseException ex) {
             if (ex.getStatusCode() == HttpStatus.NOT_FOUND) {
