@@ -24,8 +24,8 @@ eureka:
 
 rabbitmq:
   queue:
-    name: activity_queue
+    name: activity.queue
   exchange:
-    name: activity_exchange
+    name: activity.exchange
   routing:
-    key: activity_routing_key
+    key: activity.routingkey

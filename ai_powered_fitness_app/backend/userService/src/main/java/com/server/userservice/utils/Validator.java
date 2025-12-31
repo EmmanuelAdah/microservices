@@ -8,9 +8,9 @@ import java.util.regex.Pattern;
 public class Validator {
 
     public static void isValidRequest(UserRequest request) {
-        isValidName(request.getFirstName(), "Firstname");
-        isValidName(request.getLastName(), "Lastname");
-        isValidEmail(request.getEmail());
+//        isValidName(request.getFirstName(), "Firstname");
+//        isValidName(request.getLastName(), "Lastname");
+//        isValidEmail(request.getEmail());
     }
 
     public static void isValidName(String name, String field) {
