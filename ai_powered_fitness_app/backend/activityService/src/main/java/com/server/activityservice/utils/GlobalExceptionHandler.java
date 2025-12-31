@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 
+import java.util.Map;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -29,7 +31,13 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(WebClientResponseException.class)
-    public ResponseEntity<String> handleWebClientResponseException(WebClientResponseException ex) {
-        return new ResponseEntity<>(ex.getMessage(), HttpStatus.EXPECTATION_FAILED);
+    public ResponseEntity<Map<String, Object>> handleWebClientResponseException(WebClientResponseException ex) {
+        Map<String, Object> message = Map.of(
+                "message", ex.getMessage(),
+                "status", ex.getStatusCode());
+
+        return ResponseEntity
+                .status(ex.getStatusCode())
+                .body(message);
     }
 }
