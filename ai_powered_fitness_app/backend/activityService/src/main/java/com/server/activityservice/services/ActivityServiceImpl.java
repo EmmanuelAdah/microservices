@@ -8,25 +8,40 @@ import com.server.activityservice.dtos.response.ActivityResponse;
 import com.server.activityservice.exceptions.NoActivityFoundException;
 import com.server.activityservice.utils.Mapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import static com.server.activityservice.utils.Mapper.map;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ActivityServiceImpl implements ActivityService {
     private final ActivityRepository activityRepository;
-    private final UserValidationService userValidationService;
+//    private final UserValidationService userValidationService;
     private final RabbitTemplate rabbitTemplate;
+
+    @Value("${rabbitmq.exchange.name}")
+    private String exchange;
+
+    @Value("${rabbitmq.routing.key}")
+    private String routingKey;
 
     @Override
     public ActivityResponse saveActivity(ActivityRequest request) {
-        userValidationService.isValidUser(request.getUserId());
+//        userValidationService.isValidUser(request.getUserId());
 
-        Activity activity = activityRepository.save(map(request));
-        rabbitTemplate.convertAndSend(activity);
-        return map(activity);
+        Activity savedActivity = activityRepository.save(map(request));
+
+        try {
+            rabbitTemplate.convertAndSend(exchange, routingKey, savedActivity);
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to send activity", e);
+        }
+        log.info("Activity sent to queue: {}", savedActivity);
+        return map(savedActivity);
     }
 
     @Override
