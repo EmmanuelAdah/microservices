@@ -1,9 +1,11 @@
 package com.server.aiservice.services;
 
 import com.server.aiservice.models.GeminiProperties;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
+@Slf4j
 @Service
 public class AIService {
     private final WebClient webClient;
@@ -15,7 +17,10 @@ public class AIService {
         this.geminiProperties = geminiProperties;
     }
 
+
     public String getAnswers(String prompt) {
+        log.info("Gemini url: {},  Gemini api key: {}", geminiProperties.getUrl(), geminiProperties.getKey());
+
         return webClient.post()
                 .uri(geminiProperties.getUrl())
                 .header("x-goog-api-key", geminiProperties.getKey())
