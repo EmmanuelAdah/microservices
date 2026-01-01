@@ -19,7 +19,6 @@ public class AIService {
 
 
     public String getAnswers(String prompt) {
-        log.info("Gemini url: {},  Gemini api key: {}", geminiProperties.getUrl(), geminiProperties.getKey());
 
         return webClient.post()
                 .uri(geminiProperties.getUrl())

@@ -2,6 +2,10 @@ spring:
   application:
     name: ai-service
 
+  cloud:
+    discovery:
+      enabled: true
+
   rabbitmq:
     host: localhost
     port: 5672
