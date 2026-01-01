@@ -20,7 +20,7 @@ import static com.server.activityservice.utils.Mapper.map;
 @RequiredArgsConstructor
 public class ActivityServiceImpl implements ActivityService {
     private final ActivityRepository activityRepository;
-//    private final UserValidationService userValidationService;
+    private final UserValidationService userValidationService;
     private final RabbitTemplate rabbitTemplate;
 
     @Value("${rabbitmq.exchange.name}")
@@ -31,7 +31,7 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public ActivityResponse saveActivity(ActivityRequest request) {
-//        userValidationService.isValidUser(request.getUserId());
+        userValidationService.isValidUser(request.getUserId());
 
         Activity savedActivity = activityRepository.save(map(request));
 

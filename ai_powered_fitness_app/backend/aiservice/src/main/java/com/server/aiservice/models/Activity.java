@@ -12,7 +12,7 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Activity {
-    private String activityId;
+    private String id;
     private String userId;
     private String activityType;
     private double duration;

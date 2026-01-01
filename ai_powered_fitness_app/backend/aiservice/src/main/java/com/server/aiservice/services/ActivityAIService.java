@@ -38,7 +38,7 @@ public class ActivityAIService {
         List<String> safetyMeasures = processSafety(responseNode);
 
         Recommendation recommentdation= Recommendation.builder()
-                                            .activityId(activity.getActivityId())
+                                            .activityId(activity.getId())
                                             .userId(activity.getUserId())
                                             .improvements(improvemets)
                                             .safetyMeasures(safetyMeasures)
