@@ -37,16 +37,20 @@ public class ActivityAIService {
         Map<String, Object> suggestions = processSuggestions(responseNode);
         List<String> safetyMeasures = processSafety(responseNode);
 
-        Recommendation recommentdation= Recommendation.builder()
-                                            .activityId(activity.getId())
-                                            .userId(activity.getUserId())
-                                            .improvements(improvemets)
-                                            .safetyMeasures(safetyMeasures)
-                                            .suggestions(suggestions)
-                                            .recommendation(analysis.toString().trim())
-                                            .build();
+        try {
+            Recommendation recommentdation = Recommendation.builder()
+                    .activityId(activity.getId())
+                    .userId(activity.getUserId())
+                    .improvements(improvemets)
+                    .safetyMeasures(safetyMeasures)
+                    .suggestions(suggestions)
+                    .recommendation(analysis.toString().trim())
+                    .build();
 
-        return recommendationRepository.save(recommentdation);
+            return recommendationRepository.save(recommentdation);
+        } catch(Exception ex) {
+            return new Recommendation();
+        }
     }
 
     private List<String> processSafety(JsonNode responseNode) {
@@ -54,7 +58,7 @@ public class ActivityAIService {
         JsonNode safetyMeasure = responseNode.get("safety");
 
         safetyMeasure.forEach(safety -> safetyMeasures.add(safety.asText()));
-
+ 
         return (safetyMeasures.isEmpty()) ? Collections.singletonList("No safety measures recommended at the moment")
                 : safetyMeasures;
     }

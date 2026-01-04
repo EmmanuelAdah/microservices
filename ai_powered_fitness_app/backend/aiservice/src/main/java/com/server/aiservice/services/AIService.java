@@ -17,7 +17,6 @@ public class AIService {
         this.geminiProperties = geminiProperties;
     }
 
-
     public String getAnswers(String prompt) {
 
         return webClient.post()
